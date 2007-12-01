@@ -3,6 +3,12 @@ package curves;
 import function.FunVariations;
 import function.Function;
 
+/**
+ * 
+ * @author Ewans Edouard
+ * @author Vedrenne Benoit
+ *
+ */
 public class FunVariationNamed extends FunVariations {
 	private String name;
 	
