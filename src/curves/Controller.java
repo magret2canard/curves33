@@ -51,7 +51,9 @@ public class Controller extends CurveControls {
 		add(panel1);
 		
 		JButton aGauche = new JButton("A Gauche");
+		aGauche.setToolTipText("déplacement gauche");
 		JButton aDroite = new JButton("A Droite");
+		aDroite.setToolTipText("déplacement droite");
 		aGauche.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
