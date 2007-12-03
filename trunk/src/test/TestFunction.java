@@ -1,3 +1,6 @@
+package test;
+
+
 import java.io.IOException;
 
 import curves.CurveApplication;
