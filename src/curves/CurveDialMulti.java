@@ -10,6 +10,7 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -113,11 +114,16 @@ public class CurveDialMulti extends JFrame {
 						CurveDialMulti.this.dispose();
 					} catch (SyntaxErrorException e1) {
 						// TODO Auto-generated catch block
+						JOptionPane.showMessageDialog(CurveDialMulti.this, "Erreur de syntaxe\n" +
+								"de la fonction tapée\n" +
+								"\n");
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
 					} catch(NumberFormatException e1){
-					}
+					} 
 				}catch (NullPointerException e1){
+				}catch (IndexOutOfBoundsException e1) {
+					// TODO Auto-generated catch block
 				}
 			}
 		});
