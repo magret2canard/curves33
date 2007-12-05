@@ -212,6 +212,7 @@ public class CurveFrame extends JFrame {
 			int length = tracer.fvar.size();
 			for(int i = 0; i < length; i++)
 			{
+				facteur = (tracer.fvar.get(i).getXmax() - tracer.fvar.get(i).getXmin()) / 10;
 				tracer.fvar.get(i).setXmin(tracer.fvar.get(i).getXmin() + facteur);
 				tracer.fvar.get(i).setXmax(tracer.fvar.get(i).getXmax() + facteur);
 			}
