@@ -72,17 +72,19 @@ public class CurveDialMulti extends JFrame {
 					if(minimum.compareTo("") == 0)
 						minimum = String.valueOf(curve.infos.fvar.get(0).getXmin());
 				
-					try { //Nouvelle fenetre
+					try { 
 						double tempMin, tempMax;
 						Function f = Functions.parse(fun);
 						tempMin = Fonction.parseDouble(minimum);
 						tempMax = Fonction.parseDouble(maximum);
 						double max = Math.max(tempMin, tempMax);
 						double min = Math.min(tempMin, tempMax);
-						if(curve == null)
+						if(curve == null) //Nouvelle fenetre
 						{
 							List<FunctionVariations> fvars = new ArrayList<FunctionVariations>();
-							fvars.add(new FunVariationNamed(f, min, max, fun));
+							FunVariationNamed funNamed = new FunVariationNamed(f, min, max, fun);
+							fvars.add(funNamed);
+							CurvesFusion.add(funNamed);
 							CurveFrame cv = new CurveFrame(fvars);
 							cv.setBounds(CurveDialMulti.this.getX()+30 % 90, CurveDialMulti.this.getY()+30 % 90, cv.getWidth(), cv.getHeight());
 						}
@@ -109,6 +111,7 @@ public class CurveDialMulti extends JFrame {
 								curve.infos.update();
 								curve.tracer.fvar = fvar;
 								curve.tracer.repaint();
+								CurvesFusion.add(fv);
 							}
 						}
 						CurveDialMulti.this.dispose();

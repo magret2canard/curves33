@@ -72,6 +72,21 @@ public class CurveMenuBar extends JMenuBar {
 		fichier.addSeparator();
 		fichier.add(fermer);
 		
+		
+		JMenu option = new JMenu("Option");
+		JMenuItem fusion = new JMenuItem("fusion");
+		fusion.setMnemonic(KeyEvent.VK_U);
+		fusion.addActionListener(new ActionListener(){
+			
+			public void actionPerformed(ActionEvent e) {
+				fusionner();
+				
+			}
+			
+			
+		});
+		option.add(fusion);
+		
 		JMenu aide = new JMenu("Aide");
 		JMenuItem aPropos = new JMenuItem("A Propos");
 		
@@ -90,6 +105,7 @@ public class CurveMenuBar extends JMenuBar {
 		aide.add(aPropos);
 		
 		add(fichier);
+		add(option);
 		add(aide);
 	}
 
@@ -131,4 +147,17 @@ public class CurveMenuBar extends JMenuBar {
 		CurveDialMulti nouveau = new CurveDialMulti();
 		nouveau.setBounds(this.getX() +30 % 90, this.getY()+30 % 90, nouveau.getWidth(), nouveau.getHeight());
 	}
+	
+	
+	private void fusionner(){
+		CurveFrame cf = new CurveFrame(CurvesFusion.getMultiliste());
+		cf.setBounds(f.getX()+30 % 90, f.getY()+30 % 90, f.getHeight(), f.getWidth());
+
+	}
+	
+	
+	
+	
+	
+	
 }
