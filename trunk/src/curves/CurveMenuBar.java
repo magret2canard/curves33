@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -80,6 +82,20 @@ public class CurveMenuBar extends JMenuBar {
 		cf.setBounds(f.getX()+30 % 90, f.getY()+30 % 90, f.getHeight(), f.getWidth());
 	}
 	
+	private void split(){
+		List<FunctionVariations> l = f.infos.fvar;
+		int length = l.size();
+		for(int i = 0; i < length; i++)
+		{
+			List<FunctionVariations> list = new ArrayList<FunctionVariations>();
+			list.add(l.get(i));
+			CurveFrame cf = new CurveFrame(list);
+			cf.setBounds(f.getX()+30 % 90, f.getY()+30 % 90, f.getHeight(), f.getWidth());
+		}
+		if(length > 0)
+			f.dispose();
+	}
+	
 	protected void ajouter(){
 		add(ajouterMenuFichier());
 		add(ajouterOption());
@@ -145,6 +161,16 @@ public class CurveMenuBar extends JMenuBar {
 			
 		});
 		option.add(fusion);
+		
+		JMenuItem split = new JMenuItem("Split");
+		split.setMnemonic(KeyEvent.VK_U);
+		split.addActionListener(new ActionListener(){
+			
+			public void actionPerformed(ActionEvent e) {
+				split();	
+			}
+		});
+		option.add(split);
 		
 		return option;
 	}
