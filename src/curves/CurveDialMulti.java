@@ -21,7 +21,7 @@ import function.SyntaxErrorException;
 
 /**
  * 
- * Cette classe permet d'affiché une boite de dialogue pour créer une fonction variations
+ * Cette classe permet d'affiché une boite de dialogue pour créer une fonction.
  * @author Ewans Edouard
  * @author Védrenne Benoît
  * @version 1
@@ -38,7 +38,7 @@ public class CurveDialMulti extends JFrame {
 	
 	/**
 	 * Ce constructeur permet de créer une boite de dialogue pour créer une nouvelle fenetre
-	 * avec une fonction variation
+	 * avec une fonction.
 	 */
 	public CurveDialMulti(){
 		this(null);
@@ -46,7 +46,7 @@ public class CurveDialMulti extends JFrame {
 	
 	/**
 	 * 
-	 * @param cv est la CurveFrame dans laquelle on va affiché une nouvelle fonction variations
+	 * @param cv est la CurveFrame dans laquelle on va affiché une nouvelle fonction.
 	 */
 	public CurveDialMulti(CurveFrame cv) {
 		// TODO Auto-generated constructor stub

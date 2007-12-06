@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 
+ * NE SERT PAS
  * Cette classe était censée remplacé la classe CurveFrame, malheureusement il exister une erreur dans
  * l'affichage du panneau de control Controller.
  * @author Ewans Edouard

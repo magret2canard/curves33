@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * 
- * Cette classe permet d'utiliser des méthodes statiques propres au list de FunctionVariations 
+ * Cette classe permet d'utiliser des méthodes statiques propres aux listes de FunctionVariations 
  * @author Ewans Edouard
  * @author Védrenne Benoît
  * @version 1
@@ -18,7 +18,7 @@ public abstract class AbstractFunVariations extends Variations {
 	/**
 	 * 
 	 * Fixe le minimum et le maximum de tous les éléments de la liste fvars avec la valeur
-	 * du minimum et du maximum de cette liste
+	 * du minimum des x et du maximum des x de cette liste.
 	 * @param fvars
 	 */
 	public static void fixerX(List<FunctionVariations> fvars) {
