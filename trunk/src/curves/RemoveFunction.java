@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 
 /**
  * 
+ * Fenetre qui permet la suppression d'une fonction.
  * @author Ewans Edouard
  * @author Védrenne Benoît
  * @version 1

@@ -32,6 +32,7 @@ public class Controller extends CurveControls {
 		// TODO Auto-generated constructor stub
 		super(var, f);
 
+		//Ce bloc crée les boutons zoom + et -.
 		JButton zoomPlus = new JButton("+");
 		JButton zoomMoins = new JButton("-");
 		zoomPlus.addActionListener(new ActionListener(){
@@ -57,6 +58,7 @@ public class Controller extends CurveControls {
 		panel1.add(zoomMoins);
 		add(panel1);
 		
+		//Début de la création des boutons de déplacement gauche et droite.
 		JButton aGauche = new JButton("A Gauche");
 		aGauche.setToolTipText("déplacement gauche");
 		JButton aDroite = new JButton("A Droite");
@@ -84,6 +86,7 @@ public class Controller extends CurveControls {
 		panel2.add(aDroite);
 		add(panel2);
 		
+		//Création des boutons ajout et suppression de fonction.
 		JButton addFunction = new JButton("Ajouter une Fonction");
 		JButton removeFunction = new JButton("Retirer une Fonction");
 		addFunction.addActionListener(new ActionListener(){

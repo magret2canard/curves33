@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  * 
- * Cette classe créer le menu
+ * Cette classe créer le menu.
  * @author Ewans Edouard
  * @author Védrenne Benoît
  * @version 1

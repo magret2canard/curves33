@@ -3,7 +3,14 @@ package curves;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * 
+ * Crée la liste de toutes les fonctions ajoutées depuis le lancement du programme. 
+ * @author Ewans Edouard
+ * @author Védrenne Benoît
+ * @version 1
+ *
+ */
 public class CurvesFusion{
 	private static List<FunctionVariations> multiliste = new ArrayList<FunctionVariations>();
 	

@@ -23,7 +23,7 @@ import function.SyntaxErrorException;
  * Le fichier doit être du type :
  * Un intervalle c'est à dire la valeur minimale, une virgule et la valeur maximale
  * Une ligne vide
- * Une suite de fonction préfixée (pour chaque nouvelle fonction, retourner à la ligne
+ * Une suite de fonction préfixée entre chaque fonction, retourner à la ligne.
  * @author Ewans Edouard
  * @author Védrenne Benoît
  * @version 1
@@ -87,6 +87,14 @@ public class CurveFichierOuverture extends JFileChooser{
 		frame.dispose();
 	}
 	
+	/**
+	 * 
+	 * @param file
+	 * @return Liste de fonctionVariations créée à partir du fichier
+	 * @throws IOException
+	 * @throws ClassNotFoundException
+	 * @throws NumberFonctionException
+	 */
 	private List<FunctionVariations> creerFoncVar(File file) throws IOException, ClassNotFoundException, NumberFonctionException {
 		// TODO Auto-generated method stub
 		//return (List<FunctionVariations>) in.readObject();

@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 /**
  * @author casteran
  * 
- * Nous avons dut modifier amplement cette classe pour pouvoir modifier les éléments interdépendants
+ * Nous avons dut modifier amplement cette classe pour pouvoir modifier les éléments interdépendants.
  */
 public class CurveFrame extends JFrame {
 	/**

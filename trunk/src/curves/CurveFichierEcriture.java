@@ -1,8 +1,6 @@
 package curves;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -12,8 +10,7 @@ import javax.swing.JFrame;
 
 /**
  * 
- * Cette classe créer un JFileChooser qui permet l'écriture d'un fichier
- * Il existe cependant une erreur qui empeche le fichier de s'écrire
+ * Cette classe créer un JFileChooser qui permet l'écriture d'un fichier.
  * @author Ewans Edouard
  * @author Védrenne Benoît
  * @version 1
@@ -25,7 +22,6 @@ public class CurveFichierEcriture extends JFileChooser{
 	 */
 	private static final long serialVersionUID = -4724794112986662635L;
 	PrintWriter printWriter;
-	//ObjectOutputStream out;
 	File fichier;
 	CurveFrame f;
 	JFrame frame;
@@ -61,17 +57,23 @@ public class CurveFichierEcriture extends JFileChooser{
 		frame.dispose();
 	}
 	
-	private void enregisterFoncVar(List<FunctionVariations> fvars) throws IOException{ //Je n'arrive pas à  écrire dans le fichier
-		if(!fichier.exists()) //Si il existe, il serait bien de demander une confirmation
+	/**
+	 * 
+	 * Ecrit dans le fichier la liste fvar.
+	 * @param fvars
+	 * @throws IOException
+	 */
+	private void enregisterFoncVar(List<FunctionVariations> fvars) throws IOException{
+		if(!fichier.exists())
 			fichier.createNewFile();
 		
-		printWriter = new PrintWriter(new BufferedWriter(new FileWriter(fichier)));
+		printWriter = new PrintWriter(fichier);
 		printWriter.println(fvars.get(0).getXmin() + " , " + fvars.get(0).getXmax());
 		printWriter.println("");
 		int length = fvars.size();
 		for(int i = 0; i < length; i++)
 			printWriter.println(fvars.get(i));
-		//out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(fichier)));
-		//t.writeObject(fvars);
+		
+		printWriter.flush();
 	}
 }
