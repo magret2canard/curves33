@@ -8,14 +8,14 @@ import java.util.Map;
 
 /**
  * 
- * Nous avons dut réécrire totalement les opérateur ce qui est de la duplication de code.
+ * Cette classe permet une analyse syntaxique des expressions de type : + 3 4.
  * @author Ewans Edouard
  * @author Védrenne Benoît
  * @version 1
  *
  */
 public class Fonction extends Functions {
-	
+	//Nous avons dut réécrire totalement les opérateur ce qui est de la duplication de code.
 	public static final Map<String, Operator> operators = new HashMap<String, Operator>();
 
 	private static abstract class Operator {
