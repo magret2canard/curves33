@@ -155,15 +155,12 @@ public class CurveMenuBar extends JMenuBar {
 			
 			public void actionPerformed(ActionEvent e) {
 				fusionner();
-				
 			}
-			
-			
 		});
 		option.add(fusion);
 		
 		JMenuItem split = new JMenuItem("Split");
-		split.setMnemonic(KeyEvent.VK_U);
+		split.setMnemonic(KeyEvent.VK_P);
 		split.addActionListener(new ActionListener(){
 			
 			public void actionPerformed(ActionEvent e) {
