@@ -90,7 +90,7 @@ public class CurveMenuBar extends JMenuBar {
 			List<FunctionVariations> list = new ArrayList<FunctionVariations>();
 			list.add(l.get(i));
 			CurveFrame cf = new CurveFrame(list);
-			cf.setBounds(f.getX()+30 % 90, f.getY()+30 % 90, f.getHeight(), f.getWidth());
+			cf.setBounds(((f.getX()+30) * i) % 90, ((f.getY()+30) * i) % 90, f.getHeight(), f.getWidth());
 		}
 		if(length > 0)
 			f.dispose();
